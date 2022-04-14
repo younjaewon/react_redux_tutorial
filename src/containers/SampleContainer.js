@@ -15,7 +15,6 @@ const SampleContainer = ({
     getPost(1);
     getUsers(1);
   }, [getPost, getUsers]);
-
   return (
     <Sample
       post={post}
@@ -31,10 +30,10 @@ export default connect(
     post: sample.post,
     users: sample.users,
     loadingPost: sample.loading.GET_POST,
-    loadingUsers: sample.loading.GET_USERS
+    loadingUsers: sample.loading.GET_USERS,
   }),
   {
     getPost,
-    getUsers
+    getUsers,
   }
 )(SampleContainer);

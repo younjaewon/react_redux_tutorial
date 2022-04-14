@@ -57,10 +57,10 @@ export const getUsers = () => async dispatch => {
 const initialState = {
   loading: {
     GET_POST: false,
-    GET_USERS: false
+    GET_USERS: false,
   },
   post: null,
-  users: null
+  users: null,
 };
 
 const sample = handleActions(
@@ -76,7 +76,7 @@ const sample = handleActions(
       ...state,
       loading: {
         ...state.loading,
-        GET_POST: false // 요청 완료
+        GET_POST: false, // 요청 완료
       },
       post: action.payload
     }),
@@ -99,7 +99,8 @@ const sample = handleActions(
       loading: {
         ...state.loading,
         GET_USERS: false // 요청 완료
-      }
+      },
+      users: action.payload
     }),
     [GET_USERS_FAILURE]: (state, action) => ({
       ...state,
